@@ -1,0 +1,11 @@
+load('DATA_ACCQ_SUSPENSION.mat');
+suffix = ''; dt = 0.01; fc = 5; fs = 1 / dt; [b, a] = butter(2, fc/(fs/2)); 
+raw_enc  = double(raw_encoder_mm);
+clean_enc  = filtfilt(b, a, raw_enc);
+enc_vel_mps = zeros(size(clean_enc));
+enc_vel_mps(2:end-1) = (clean_enc(3:end) - clean_enc(1:end-2)) ./ (2*dt);
+disp('First 10 values of clean_enc:');
+disp(clean_enc(1:10)');
+disp('First 10 values of enc_vel:');
+disp(enc_vel_mps(1:10)');
+exit;
