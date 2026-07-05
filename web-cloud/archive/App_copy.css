@@ -1,0 +1,96 @@
+.activities {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+}
+
+.learn-by-doing {
+  padding-top: 0px;
+}
+.activity h2 {
+  font-family: "Poppins", sans-serif; /* Ensures consistent styling */
+  font-size: 3rem; /* Larger text for emphasis */
+  font-weight: bold;
+  color: rgb(255, 255, 255); /* Pure white for clarity */
+  text-shadow: 0 0 8px rgb(255, 255, 255),
+    /* White glow for sharpness */ 0 0 16px rgb(204, 204, 204),
+    /* Softer grayish-white glow */ 0 0 24px rgb(255, 215, 0); /* Golden glow for balance */
+}
+
+.activity {
+  flex: 1; /* Each section takes half of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.3s;
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0); /* Make text black */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay; /* Blend the image with color */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 100px; /* Spacing between components */
+}
+
+
+
+/* Left Side (Tuning Sessions) */
+.activity.tuning {
+  background: url("/public/WhatsApp Image 2025-03-02 at 22.47.13_45ee56d1.jpg")
+    no-repeat center center/cover;
+  background-color: rgba(255, 0, 0, 0.4); /* Red overlay */
+}
+.activity.tuning h2:hover {
+  transition: font-size 0.3s ease-in-out;
+
+  font-size: 4rem; /* Larger text for emphasis */
+}
+/* Right Side (Interactive Lessons) */
+.activity.interactive {
+  background: url("/public/video-conference.png") no-repeat center center/cover;
+  background-color: rgba(0, 0, 255, 0.4); /* Blue overlay */
+}
+.activity.interactive h2:hover {
+  transition: font-size 0.3s ease-in-out;
+
+  font-size: 4rem; /* Larger text for emphasis */
+}
+/* Button Styling */
+.btn {
+  margin-top: 10px;
+  padding: 12px 20px;
+  border: none;
+  background-color: #02a69c;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .activities {
+    flex-direction: column; /* Stack sections on mobile */
+    height: auto;
+  }
+
+  .activity {
+    flex: none;
+    width: 100%;
+    padding: 40px;
+    height: 50vh; /* Adjust height for mobile */
+  }
+}
+

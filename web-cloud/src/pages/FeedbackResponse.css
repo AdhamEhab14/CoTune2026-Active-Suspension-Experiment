@@ -1,0 +1,99 @@
+.pa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.feedback-response-page {
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-response-page h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feedback-response-page p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 16px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.feedback-list {
+  margin-bottom: 20px;
+}
+
+.feedback-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.feedback-item:last-child {
+  border-bottom: none;
+}
+
+.feedback-item p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.feedback-item p strong {
+  color: #555;
+}
+
+.back-button {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover:not(:disabled) {
+  background-color: #bbb;
+}
+
+.back-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}

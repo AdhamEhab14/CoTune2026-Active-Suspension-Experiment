@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Active_Suspension_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0017852 0.28483 -0.0022167"
+        rpy="0 0 0" />
+      <mass
+        value="2.8852" />
+      <inertia
+        ixx="0.031256"
+        ixy="3.9095E-10"
+        ixz="-3.2805E-07"
+        iyy="0.042918"
+        iyz="-1.1608E-08"
+        izz="0.031032" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-5.0869E-09 -0.021265 5.7292E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.44228" />
+      <inertia
+        ixx="0.0019585"
+        ixy="-4.1039E-11"
+        ixz="6.8978E-12"
+        iyy="0.0038319"
+        iyz="-3.864E-11"
+        izz="0.0019942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="prismatic">
+    <origin
+      xyz="0 0.30472 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.018"
+      upper="-0.018"
+      effort="100"
+      velocity="0.3" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="1.8428E-06 -0.0029708 -6.5349E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.38813" />
+      <inertia
+        ixx="0.0018924"
+        ixy="-3.6425E-12"
+        ixz="-4.9358E-11"
+        iyy="0.0037817"
+        iyz="2.0856E-11"
+        izz="0.0018926" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="prismatic">
+    <origin
+      xyz="0 0.12957 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.0175"
+      upper="0.0175"
+      effort="0"
+      velocity="0.3" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0046856 -0.015674 2.5684E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.60901" />
+      <inertia
+        ixx="0.0019559"
+        ixy="1.7858E-05"
+        ixz="-1.4489E-05"
+        iyy="0.0038406"
+        iyz="-1.9353E-08"
+        izz="0.0019914" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Active_Suspension_urdf/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="prismatic">
+    <origin
+      xyz="0 0.20176 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.019"
+      upper="0.019"
+      effort="38.3"
+      velocity="0.3" />
+  </joint>
+</robot>

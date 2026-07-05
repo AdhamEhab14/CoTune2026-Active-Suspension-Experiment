@@ -1,0 +1,16 @@
+.curly-box {
+  max-width: 800px; /* Match the width of .info-card */
+  padding: 40px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Nice shadow effect */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+  
+  display: flex; /* Ensure buttons align next to each other */
+  justify-content: center; /* Center them horizontally */
+  align-items: center; /* Center them vertically */
+  flex-wrap: wrap; /* Wrap if screen is small */
+  gap: 20px; /* Spacing between buttons */
+  margin: auto; /* Center the box */
+}

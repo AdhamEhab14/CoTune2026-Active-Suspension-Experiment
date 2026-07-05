@@ -1,0 +1,87 @@
+
+  
+  .access-denied-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffdde1, #ffebbb); /* Light Pink → Soft Peach */
+    color: #333333;
+    text-align: center;
+    padding: auto auto ;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .lock-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    fill: #d81b60; /* Pink shade to match the theme */
+    transition: transform 0.3s ease;
+  }
+  
+  .lock-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .access-denied-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #d81b60; /* Pink shade to match the theme */
+  }
+  
+  .access-denied-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #555555;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d81b60;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #b91550;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .access-denied-container h1 {
+      font-size: 2rem;
+    }
+  
+    .access-denied-container p {
+      font-size: 1rem;
+    }
+  
+    .lock-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }

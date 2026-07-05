@@ -1,0 +1,61 @@
+/* From Uiverse.io by kennyotsu - Scaled Up Version */
+.notifications-container {
+  width: fit-content; /* or a fixed width */
+  height: auto;
+  font-size: 1.125rem;        /* ~18px */
+  line-height: 1.75rem;
+  display: flex;
+  align-items: center;     
+  flex-direction: column;
+  gap: 1.5rem;                /* increased space between items */
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.error-alert {
+  border-radius: 0.5rem;      /* slightly more rounded */
+  padding: 1.5rem;            /* more padding for larger content */
+  background-color: rgb(254 242 242);
+}
+
+.error-svg {
+  color: #F87171;
+  width: 1.75rem;             /* bigger icon */
+  height: 1.75rem;
+}
+
+.error-prompt-heading {
+  color: #991B1B;
+  font-size: 1.25rem;         /* ~20px */
+  line-height: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.error-prompt-container {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 0.5rem; optional */
+}
+
+.error-prompt-wrap {
+  color: #B91C1C;
+  font-size: 1.125rem;        /* ~18px */
+  line-height: 1.5rem;
+  /* margin-top: 0.5rem; optional */
+}
+
+.error-prompt-list {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  list-style-type: disc;
+  font-size: 1.125rem;        /* ~18px */
+  line-height: 1.5rem;
+}

@@ -1,0 +1,10 @@
+# Secrets — never commit
+.env
+certs/
+
+# Local runtime
+.venv/
+__pycache__/
+*.pyc
+controller.log
+*.log

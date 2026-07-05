@@ -1,0 +1,3 @@
+paho-mqtt>=2.0.0
+obsws-python>=1.6.0
+python-dotenv>=1.0.0

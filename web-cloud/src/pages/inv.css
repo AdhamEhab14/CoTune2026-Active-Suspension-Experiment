@@ -1,0 +1,399 @@
+/* General container style */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.w {
+  padding-top: 80px;
+}
+
+.pageContainer {
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.q-matrix-container {
+  margin-top: 2em;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  color: var(--text-primary);
+}
+
+.r-matrix-container {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  color: var(--text-primary);
+}
+
+.q-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(5, auto); /* 1 for labels + 4 for matrix */
+  gap: 0.5em;
+  align-items: center;
+  justify-content: start;
+  margin-top: 1em;
+}
+
+.matrix-label {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.2em 0.5em;
+  color: var(--text-primary);
+}
+
+/* Hide labels from screen but keep for accessibility */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+}
+
+.input-group input {
+  width: 4em;
+  padding: 0.3em;
+  text-align: center;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+}
+
+.lood {
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 9999;
+}
+
+.containerI {
+  width: 80%; /* Make container take full width */
+  max-width: 100vw; /* Limit the width to viewport width */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Ensure padding doesn't add extra width */
+  background: transparent;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* Section for PID inputs */
+.pid-inputs {
+  width: 35%;
+  padding: 8px;
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.K-inputs h2 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+/* Input row styling */
+.input-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between the inputs */
+}
+
+.raw15 {
+  margin: 0 auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input-grou {
+  flex: 1;
+  margin: 0; /* Remove any additional margin */
+  min-width: 5%; /* Ensure they don't overflow on smaller screens */
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 12px; /* Smaller label font */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 6px;
+  font-size: 12px;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+/* Section for Angle inputs */
+.angle-inputs {
+  margin-bottom: 30px;
+}
+
+.angle-inputs h2 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+/* Input row styling for Angle inputs */
+.angle-inputs .input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.angle-inputs .input-group {
+  flex: 1;
+  margin: 0;
+}
+
+.angle-inputs .input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.angle-inputs .input-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styling */
+button {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add styles for disabled buttons */
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.feedback-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  margin: 16px auto;
+  max-width: 400px;
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feedback-prompt:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-prompt p {
+  margin: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.feedback-button {
+  padding: 12px 24px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.feedback-button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.feedback-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.feedback-button:active {
+  transform: scale(0.95);
+}
+
+button:disabled:hover {
+  background-color: #cccccc;
+}
+
+/* Button for Start command */
+.toggle-button {
+  background-color: #007bff;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+/* Message Box styling */
+.message-box {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.message-box h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.message-box p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.message-box p:last-child {
+  font-weight: normal;
+}
+
+/* General container for centering */
+.chart-container {
+  display: flex;
+  justify-content: center; /* Center charts horizontally */
+  align-items: center; /* Center charts vertically */
+  gap: 20px;
+  margin-top: 20px; /* Reduced margin-top */
+  margin-bottom: 20px; /* Reduced margin-bottom */
+  flex-wrap: wrap; /* Allow charts to wrap when necessary */
+  text-align: center; /* Center the content inside the chart container */
+  height: auto; /* Automatically adjust height based on content */
+  max-height: 80vh; /* Limit the height to 80% of the viewport height */
+}
+
+/* To ensure chart elements take appropriate space and are responsive */
+.chart-container > .chart {
+  flex: 1 1 45%; /* Allow charts to take up 45% of the container width on larger screens */
+  min-width: 280px; /* Set a minimum width to avoid collapsing on smaller screens */
+  text-align: center; /* Ensure the content inside each chart is centered */
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.slider-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.slider-group input[type="range"] {
+  width: 200px;
+}
+/* On small screens (mobile), display charts vertically */
+@media (max-width: 720px) {
+  .chart-container {
+    flex-direction: column; /* Stack charts vertically */
+    align-items: center; /* Center charts on smaller screens */
+    gap: 15px; /* Reduce gap between charts on smaller screens */
+  }
+
+  .chart-container {
+    flex-direction: column; /* Stack charts vertically */
+    gap: 10px; /* Smaller gap between charts */
+  }
+
+  .chart-container > .chart {
+    flex: 1 1 100%; /* Let each chart take up 100% of the width on small screens */
+    max-width: 100%; /* Ensure the chart does not exceed 100% of screen width */
+  }
+}
+
+/* Timer styling */
+.time-remaining {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border: 1px solid var(--card-border);
+}
+
+.time-remaining h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.1em;
+}

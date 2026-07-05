@@ -1,0 +1,141 @@
+.profile-dropdown-container {
+    position: absolute;
+    right: 100px;
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 10px; /* Extend hover area to reduce gap */
+
+
+  }
+  
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.2s;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.1);
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    top: 40px; /* Reduced from 50px to close gap */
+    right: 0;
+    background-color: #1a1a1a; /* Slightly lighter than #000000 */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    z-index: 1200; /* Above chat sidebar (1100) */
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .dropdown-profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+  }
+  
+  .dropdown-name {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px 0;
+  }
+  
+  .dropdown-role {
+    color: #cccccc;
+    font-size: 14px;
+    margin: 5px 0 10px;
+  }
+  
+  .dropdown-signout {
+    background-color: #d9534f; /* Matches nav.css btn-signout */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-signout:hover {
+    background-color: #c9302c; /* Matches nav.css btn-signout:hover */
+  }
+
+
+  .dropdown-order {
+    background-color: green; /* Matches nav.css btn-signout */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-order:hover {
+    background-color: green; /* Matches nav.css btn-signout:hover */
+  }
+  @media (max-width: 768px) {
+    .profile-dropdown-container {
+      position: static; /* Flow in side menu */
+      display: block;
+      padding: 10px; /* Matches nav.css nav-link */
+      margin-top: 2px; /* Matches nav.css li */
+    }
+  
+
+  
+    .profile-pic-wrapper {
+      justify-content: flex-start;
+    }
+  
+    .profile-pic {
+      width: 56px;
+      height: 56px;
+    }
+  
+    .profile-dropdown {
+      position: static; /* Inline with menu */
+      min-width: 180px;
+      background-color: #222222; /* Slightly lighter for nesting */
+      margin: 10px 0 0 20px; /* Indent like submenu */
+      padding: 10px;
+    }
+  
+    .dropdown-profile-pic {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .dropdown-name {
+      font-size: 14px;
+    }
+  
+    .dropdown-role {
+      font-size: 12px;
+    }
+  
+    .dropdown-signout {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }

@@ -1,0 +1,35 @@
+.custom-toast {
+  font-size: 1rem;
+  padding: 16px 20px !important;
+  border-radius: 14px !important;
+  background-color: #fff3cd !important; /* Warning yellow */
+  color: #856404 !important;            /* Warning text */
+  width: 420px !important;
+  min-height: 80px;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.custom-toast button {
+  width: fit-content;
+  padding: 0.5em 1em !important;
+}
+
+/* 📱 Mobile-specific styling */
+@media (max-width: 720px) {
+  .custom-toast {
+    max-width: 90vw;
+    font-size: 0.9rem;
+    padding: 0.8em;
+  }
+
+  .custom-toast button {
+    font-size: 0.85rem;
+    padding: 0.4em 0.8em;
+  }
+}

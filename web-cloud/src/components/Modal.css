@@ -1,0 +1,80 @@
+/* Prevent background scroll */
+body.active-modal {
+  overflow: hidden;
+}
+.modal-content h2 {
+  font-size: 20px;
+  color: #c0392b;
+  margin-bottom: 10px;
+}
+
+.modal-content ol {
+  padding-left: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+
+.modal-content ol li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+
+/* Modal Wrapper */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Overlay ONLY blurs the background */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000; /* Behind the modal content */
+}
+
+/* Modal content stays clear */
+.modal-content {
+  position: relative;
+  background: #ffffff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  z-index: 1001; /* In front of the overlay */
+  max-width: 90%;
+  width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+.close-modal:hover {
+  color: #000;
+}

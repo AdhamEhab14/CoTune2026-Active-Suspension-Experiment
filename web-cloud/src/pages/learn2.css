@@ -1,0 +1,120 @@
+/* learn1.css */
+/* General body styles */
+body {
+  background-color: var(--bg-primary);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the entire Q&A section */
+.containerL {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* Styling for each question button */
+learnbtn {
+  width: 100%;
+  text-align: left;
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #357ab7;
+  transform: translateY(-2px);
+}
+
+button h2 {
+  margin: 0;
+  font-size: inherit;
+}
+
+/* Styling for the answer section */
+div > .p-4 {
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "Courier New", monospace;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Button for the next page */
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:hover {
+  background-color: #888;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  pre {
+    font-size: 0.85rem;
+  }
+}

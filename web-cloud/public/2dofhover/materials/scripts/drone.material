@@ -1,0 +1,14 @@
+material drone/base
+{
+    recieve_shadows off
+    tecgnique
+    {
+        pass
+        {
+            texture__unit
+            {
+                texture base.png
+            }
+        }
+    }
+}

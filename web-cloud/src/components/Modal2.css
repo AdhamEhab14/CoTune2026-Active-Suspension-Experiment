@@ -1,0 +1,99 @@
+/* Prevent background scroll when modal is open */
+.modal-content ol,
+.modal-content ol li,
+.modal-content ul,
+.modal-content ul li,
+.modal-content p {
+  text-align: left;
+}
+
+body.active-modal {
+  overflow: hidden;
+}
+
+/* Modal wrapper */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Background blur and dark overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 28px 36px;
+  border-radius: 16px;
+  z-index: 1001;
+  max-width: 90%;
+  width: 480px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+  color: #222;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.modal-content h2 {
+  font-size: 24px;
+  color: #c0392b;
+  margin-bottom: 14px;
+}
+
+/* List */
+.modal-content ol {
+  padding-left: 20px;
+  margin: 16px 0;
+}
+
+.modal-content ol li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.modal-content ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: #000;
+}

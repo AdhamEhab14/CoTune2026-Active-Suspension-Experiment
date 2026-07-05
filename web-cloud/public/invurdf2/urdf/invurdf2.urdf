@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="invurdf2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.52134 0.080315 0.025851"
+        rpy="0 0 0" />
+      <mass
+        value="3.6147" />
+      <inertia
+        ixx="0.00044888"
+        ixy="-5.5123E-08"
+        ixz="1.9241E-15"
+        iyy="0.24504"
+        iyz="9.1996E-19"
+        izz="0.24517" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.STL" scale="2.0 1.0 1.0" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1"  />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="cart">
+    <inertial>
+      <origin
+        xyz="-0.063158 -0.056692 0.040187"
+        rpy="0 0 0" />
+      <mass
+        value="0.59648" />
+      <inertia
+        ixx="0.00028339"
+        ixy="3.5327E-07"
+        ixz="-1.8517E-07"
+        iyy="0.00045456"
+        iyz="-5.8837E-07"
+        izz="0.00063141" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.52 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/cart.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="3 3 3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/cart.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="prismatic">
+    <origin
+      xyz="-0.468 0.0206 -0.119"
+      rpy="0 0 -1.5708"  />
+    <parent
+      link="base_link" />
+    <child
+      link="cart" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.856"
+      upper="0.856"
+      effort="15"
+      velocity="3" />
+  </joint>
+  <link
+    name="pendulum">
+    <inertial>
+      <origin
+        xyz="-0.057311 -0.047096 -0.15465"
+        rpy="0 0 0" />
+      <mass
+        value="0.30048" />
+      <inertia
+        ixx="0.0036729"
+        ixy="-5.414E-05"
+        ixz="-0.001318"
+        iyy="0.0040827"
+        iyz="-0.0001449"
+        izz="0.00056101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/pendulum.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/pendulum.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 -0.572199 -0.028"
+      rpy="-3.1005 0.35113 -1.5708" />
+    <parent
+      link="cart" />
+    <child
+      link="pendulum" />
+    <axis
+      xyz="0 -0.99915720211753 0.0410473562689422" />
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="40"
+      velocity="3" />
+  </joint>
+</robot>

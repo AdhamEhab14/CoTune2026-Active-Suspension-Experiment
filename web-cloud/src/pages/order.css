@@ -1,0 +1,177 @@
+.pag {
+  margin-top: 80px;
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  padding-top: 5%;
+
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #ffdde1, #ffebbb); /* Light Pink → Soft Peach */
+}
+
+ .vid-container {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: transparent; 
+  padding: 20px;
+  text-align: center;
+
+} 
+
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
+    justify-content: center;
+
+}
+
+
+.queue-container {
+  padding: 20px;
+  margin: 40px auto 0; /* ⬅ Adds 40px space above */
+
+  font-family: Arial, sans-serif;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: transparent; /* You can change this to your desired background */
+}
+
+.queue-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.queue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-height: 50px;
+}
+.heeeeeaaaaddd{
+  margin:20px
+}
+
+.control-button {
+  background-color: #007bff;
+  margin: 5px;
+  margin-top: 20px;
+  width: 100%;         /* Fill grid column */
+  height: 60px;        /* Optional: make all buttons equal height */
+  font-size: 1rem;
+  white-space: normal; /* Allow line-breaks if text is long */
+
+}
+
+.control-button:hover {
+  background-color: #0056b3;
+}
+.queue-item {
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  touch-action: none;
+}
+
+/* Highlighted when dragging */
+.queue-item.dragging {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.queue-item:not(.dragging):hover {
+  background-color: #ececec;
+  cursor: grab;
+}
+
+.sav-button {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  margin: 20px auto 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sav-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.sav-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+/* New: Drag-and-drop area container */
+.drag-area {
+  background-color: #e6f7ff;
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  min-height: 300px;
+  transition: background-color 0.3s ease;
+}
+
+/* Highlight area on drag over */
+.drag-area.dragging-over {
+  background-color: #d0efff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .queue-container {
+    padding: 10px;
+  }
+
+  .queue-item {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .sav-button {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .button-group {
+    grid-template-columns: repeat(2, 1fr); 
+  } 
+   /* .control-button{
+    width: 100px;
+    font-size: 14px;
+
+  } */
+
+}

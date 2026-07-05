@@ -1,0 +1,99 @@
+/* URDF Viewer Container */
+.urdf {
+  position: relative;
+  height: auto; /* Auto height for dynamic resizing */
+  width: 100%;
+  max-height: 500px; /* Prevent excessive height */
+  padding-top: 20px; /* Adjusted padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Button Wrapper */
+.button-wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding-top: 10px; /* Adjusted spacing */
+}
+
+/* Button Containers */
+.button-container-left,
+.button-container-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common Button Styles */
+.urdfbutton5,
+.urdfbutton4 {
+  font-family: "Salsa", Helvetica, Arial, sans-serif;
+  font-size: 1.2vw; /* Responsive font size */
+  padding: 10px 18px; /* Adjusted padding */
+  margin: 6px 10px; /* Adjusted margins */
+  border-radius: 6px; /* Smooth corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #444;
+  background-color: transparent;
+  color: #444;
+}
+
+/* Hover & Active Effects */
+.urdfbutton5:hover,
+.urdfbutton4:hover {
+  background-color: #444;
+  color: #ffffff;
+}
+
+.urdfbutton5:active,
+.urdfbutton4:active {
+  transform: scale(0.95);
+}
+
+/* Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
+  .urdf {
+    height: 400px; /* Adjust height for tablets */
+  }
+
+  .button-wrap {
+    width: 85%; /* More compact button spacing */
+  }
+
+  .urdfbutton5,
+  .urdfbutton4 {
+    font-size: 2vw; /* Slightly larger font for better readability */
+    padding: 8px 14px;
+    margin: 5px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .urdf {
+    height: 300px; /* Smaller height for mobile screens */
+  }
+
+  .button-wrap {
+    width: 90%;
+    padding-top: 15px; /* Tighter layout */
+  }
+
+  .urdfbutton5,
+  .urdfbutton4 {
+    font-size: 2vw;
+    padding: 6px 12px;
+    margin: 6px 8px;
+  }
+}

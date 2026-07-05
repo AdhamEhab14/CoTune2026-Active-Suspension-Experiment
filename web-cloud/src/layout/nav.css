@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.containerN {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  position: fixed;
+  /* top: 0;
+  left: 0;
+  right: 0; */
+  display: flex;
+  background-color: var(--nav-bg);
+  z-index: 1200;
+  padding: 0px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  height: 80px;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 40px; /* Adjust the value as needed */
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+/* 🔹 Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+.nav-elements {
+  display: flex;
+  align-items: center;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-elements ul a.active {
+  color: #05a59b;
+  font-weight: 500;
+  position: relative;
+}
+
+/* .nav-elements ul a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-secondary);
+} */
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+}
+
+.nav-link:hover {
+  color: #05a59b;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Q&A Dropdown */
+.nav-dropdown-item {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger.active {
+  color: #05a59b;
+  background: var(--nav-bg);
+}
+/* .nav-dropdown-trigger.active {
+  color: #05a59b;
+} */
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nav-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 6px 0;
+  min-width: 150px;
+  list-style: none;
+  margin: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.nav-dropdown-menu li {
+  margin: 0 !important;
+}
+
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu li a:hover,
+.nav-dropdown-menu li a.active {
+  color: #05a59b;
+  /* background: var(--card-bg); */
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 1px;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--text-primary);
+}
+
+.theme-toggle-btn.light-mode:hover {
+  color: #c0c0c0;
+}
+
+.theme-toggle-btn.dark-mode:hover {
+  color: #0d1117;
+}
+
+.btn-signout {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+  display: flex;
+  position: absolute;
+  right: 40px; /* Adjust the value as needed */
+}
+
+.btn-signout:hover {
+  background-color: #c9302c;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    z-index: 1200;
+    padding: 10px 0;
+  }
+
+  .main-content {
+    margin-top: 80px;
+    /* Ensure content below navbar is not hidden */
+  }
+
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    right: 30px; /* Adjust the value as needed */
+    top: 10px;
+  }
+
+  .btn-signout {
+    position: static; /* Removes absolute positioning */
+    right: auto; /* Resets right positioning */
+    margin-top: 10px;
+    width: 150px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 16px; /* Adjust text size */
+    justify-content: center; /* Center it if needed */
+  }
+
+  .nav-elements {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: var(--nav-bg);
+    width: 0px;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it's above everything */
+  }
+
+  .nav-link {
+    padding: 10px;
+  }
+
+  .nav-elements.active {
+    width: 270px !important;
+    padding: 10px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 10px;
+    top: 40px;
+    /* adjust based on your layout */
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 2px;
+  }
+
+  .nav-dropdown-trigger {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: var(--card-bg);
+    border-radius: 6px;
+    padding: 4px 0 4px 12px;
+    margin-top: 4px;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1001;
+  }
+
+  .mobile-profile-menu .profile-dropdown-container {
+    margin-left: 10px;
+  }
+
+  /* Optional: reduce size for profile pic on mobile */
+  .profile-pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: absolute;
+    right: 80px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .right-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+  }
+}

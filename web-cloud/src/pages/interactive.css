@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh; /* Ensures full viewport coverage */
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: 90px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Search Bar */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: 2px solid var(--card-border);
+  margin: 0 auto;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.search-icon {
+  margin-left: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: var(--nav-bg);
+  position: fixed;
+  left: 0;
+  top: 50px;
+  bottom: 0;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-primary);
+  transition: background 0.3s ease-in-out;
+}
+
+.sidebar li:hover {
+  background-color: var(--card-bg);
+}
+
+/* Video Grid */
+.video-grid {
+  margin-top: 150px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Ensure multiple columns */
+  gap: 20px;
+  padding-bottom: 40px;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px; /* Prevent excessive stretching */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Video Card */
+.video-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-info {
+  padding: 10px;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.description {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Video Player */
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.video-title {
+  padding-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Smaller sidebar on tablets */
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Keep two columns for medium screens */
+    margin-top: 70px;
+  }
+
+  .search-bar-container {
+    width: 80%; /* Reduce search bar width */
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    z-index: 100; /* Ensure menu is above other elements */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    ); /* More dynamic layout */
+    gap: 10px; /* Reduce spacing */
+  }
+
+  .search-bar-container {
+    width: 100%;
+    position: relative; /* Prevents floating */
+    z-index: 10; /* Lower than the menu */
+  }
+
+  .top-bar {
+    margin-top: 110px;
+    z-index: 50; /* Keeps it below sidebar but above main content */
+  }
+}

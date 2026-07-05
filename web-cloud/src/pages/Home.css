@@ -1,0 +1,301 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scroll Container */
+#container {
+  background-size: 100% 600%;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto;
+  -ms-overflow-style: none;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+  padding-bottom: 20px;
+}
+
+#container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Global Styles for Sections */
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  scroll-snap-align: start;
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+/* Hero Section */
+.hero-section .content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-gif {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.inverted-gif {
+  max-width: 100%;
+  width: 400px;
+  margin-top: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Simulation Section */
+.simulation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simulation-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  gap: 2rem;
+}
+
+.simulation-section .info-card {
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero2-gif {
+  flex: 1;
+  max-width: 50%;
+  margin-top: 80px;
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Section Backgrounds (Dynamic Theme) */
+.section:nth-child(even) {
+  background: var(--bg-primary);
+}
+
+.section:nth-child(odd) {
+  background: var(--bg-primary);
+}
+
+/* Centered Content (Glassmorphism) */
+.content {
+  max-width: 800px;
+  width: 90%;
+  margin-top: 80px;
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Heading & Subtitle */
+.title {
+  color: var(--text-primary);
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Experiments Section */
+.experiment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin-top: 1rem;
+}
+
+.experiment-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.experiment-item:hover {
+  transform: translateY(-5px);
+}
+
+.experiment-image {
+  width: 180px;
+  height: 180px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--card-border);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.two-dof-hover {
+  background: rgba(255, 255, 255, 0.05) url("../assets/realQuadrotor.png")
+    no-repeat center/contain;
+}
+
+.inverted-pendulum {
+  background: rgba(255, 255, 255, 0.05) url("../assets/realPendulum.png")
+    no-repeat center/contain;
+}
+
+.active-suspension {
+  background: rgba(255, 255, 255, 0.05) url("../assets/realSuspension.png")
+    no-repeat center/contain;
+}
+
+.rotary-inverted-pendulum {
+  background: rgba(255, 255, 255, 0.05) url("../assets/realFuruta.png")
+    no-repeat center/contain;
+}
+
+/* About List */
+.info-card ul {
+  list-style: none;
+  text-align: left;
+  margin: 0 auto 1.5rem;
+  max-width: 600px;
+}
+
+.info-card ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.info-card ul li:before {
+  content: "✔";
+  color: #4facfe;
+  position: absolute;
+  left: 0;
+}
+
+/* Button Styling */
+.cta-button {
+  margin-top: 20px;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: white;
+  color: #4facfe;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Card Styling for Info Sections */
+.info-card {
+  max-width: 800px;
+  padding: 40px;
+  text-align: center;
+  background: var(--card-bg);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 20px;
+  }
+
+  .content {
+    max-width: 90%;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .info-card {
+    max-width: 100%;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    margin-top: -50px;
+  }
+
+  .info-card ul li {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .experiment-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-gif,
+  .hero2-gif,
+  .inverted-gif {
+    display: none;
+  }
+
+  .simulation-section .info-card {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .simulation-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
