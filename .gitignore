@@ -1,46 +1,21 @@
-# MATLAB/Simulink specific
-*.asv
-*.mex*
-*.pdb
-*.slxc
-*.slic
-*.slx.original
-*.mdl.original
-*.mdl.autosave
-*.slx.autosave
+# OS junk
+.DS_Store
+Thumbs.db
 
-# Log file
-*.log
-
-# Simulink code generation folder
-slprj/
-
-# MATLAB code generation folder
-codegen/
-
-# Other temporary files
-*~
-*_ert_rtw/
-*_grt_rtw/
-*_slrt_rtw/
-*.bak
-*.orig
-*.ilk
-*.exp
-*.lib
-*.obj
-*.opt
-*.sbr
-*.sdf
-*.suo
-
-# MATLAB MEX file build logs
-*_mex.log
-*_mex.rsp
-
-# MATLAB profile reports
-profile.mat
-
-# MAT-files that are not data
-*.mat
-!/MPCDesignerSession.mat
+# web-cloud (Node/React/Amplify)
+web-cloud/node_modules/
+web-cloud/build/
+web-cloud/.env
+web-cloud/.env.local
+web-cloud/.venv/
+web-cloud/.history/
+web-cloud/amplify/team-provider-info.json
+web-cloud/amplify/\#current-cloud-backend
+web-cloud/amplify/.config/local-*
+web-cloud/amplify/mock-data
+web-cloud/amplify/mock-api-resources
+web-cloud/amplify/backend/amplify-meta.json
+web-cloud/amplify/backend/.temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
