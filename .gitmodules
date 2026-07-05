@@ -1,0 +1,3 @@
+[submodule "rotary-pendulum"]
+	path = rotary-pendulum
+	url = https://github.com/AdhamEhab14/Rotary-Inverted-Pendulum.git
